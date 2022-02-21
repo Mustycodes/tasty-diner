@@ -1,0 +1,153 @@
+@import "./utils/mixins", "./utils/variables";
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.flex-center {
+  @include flexContent;
+}
+
+.app__bg {
+  background: url("");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.app__wrapper {
+  @include flexContent(space-between, center);
+  min-height: 100vh;
+}
+
+.app__wrapper_info {
+  flex: 1;
+  width: 100%;
+  @include flexContent(center, flex-start, column);
+}
+
+.app__wrapper_img {
+  flex: 1;
+  width: 100%;
+  margin-left: 2rem;
+  @include flexContent;
+
+  img {
+    width: 80%;
+  }
+}
+
+.app__wrapper_img--reverse {
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+.p--font-cormorant {
+  font-family: $fontBase;
+  color: $colorWhite;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: "tnum" on, "lnum" on;
+  line-height: 29.9px;
+  font-size: 16px;
+}
+
+.p--font-opensans {
+  font-family: $fontAlt;
+  color: $colorWhite;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.headtext--font-coromorant {
+  font-family: $fontBase;
+  color: $colorGolden;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 83.2px;
+  font-size: 64px;
+}
+
+// .spoon__img {
+//     width: 45px;
+//   }
+
+//   @media screen and (min-width: 2000px) {
+//     .custom__button,
+//     .p__cormorant {
+//       font-size: 37px;
+//       line-height: 67px;
+//     }
+
+//     .p__opensans {
+//       font-size: 30px;
+//       line-height: 50px;
+//     }
+
+//     .headtext__cormorant {
+//       font-size: 150px;
+//       line-height: 210px;
+//     }
+
+//     .spoon__img {
+//       width: 80px;
+//     }
+//   }
+
+//   @media screen and (max-width: 1150px) {
+//     .app__wrapper {
+//       flex-direction: column;
+//     }
+
+//     .app__wrapper_img {
+//       margin: 5rem 0 0 0;
+//     }
+
+//     .app__wrapper_img-reverse {
+//       margin: 0 0 5rem 0;
+//     }
+
+//     .app__wrapper_img img {
+//       width: 100%;
+//     }
+//   }
+
+//   @media screen and (max-width: 850px) {
+//     .section__padding {
+//       padding: 4rem;
+//     }
+//   }
+
+//   @media screen and (max-width: 650px) {
+//     .section__padding {
+//       padding: 4rem 2rem;
+//     }
+
+//     .p__cormorant {
+//       font-size: 21px;
+//     }
+
+//     .p__opensans {
+//       font-size: 14px;
+//     }
+//   }
+
+//   @media screen and (max-width: 450px) {
+//     .p__opensans {
+//       font-size: 12px;
+//     }
+
+//     .p__cormorant {
+//       font-size: 19px;
+//     }
+
+//     .headtext__cormorant {
+//       font-size: 45px;
+//       line-height: 70px;
+//     }
+//   }

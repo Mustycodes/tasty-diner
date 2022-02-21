@@ -1,0 +1,53 @@
+@import "../../utils/variables", "../../utils/mixins";
+
+.navbar {
+  @include flexContent(space-between, center);
+  width: 100%;
+  background-color: $colorBlack;
+  padding: 1rem 2rem;
+
+  &-logo {
+    @include flexContent(flex-start, center);
+    // border: 2px solid blue;
+
+    img {
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  &__links {
+    @include flexContent(center, center);
+    flex: 1;
+    // border: 2px solid orange;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0 1rem;
+
+    &:hover {
+      color: $colorGrey;
+    }
+  }
+
+  &__actions {
+    @include flexContent(flex-end, center);
+    gap: 0 1rem;
+
+    div {
+      width: 1px;
+      height: 30px;
+      background-color: $colorGrey;
+    }
+  }
+
+  &__action-link {
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s ease;
+
+    &:hover {
+      border-bottom: 1px solid $colorGolden;
+    }
+  }
+}
